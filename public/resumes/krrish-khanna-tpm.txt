@@ -1,0 +1,23 @@
+KRRISH KHANNA
+Technical Program Management Resume
+
+Positioning
+AI x Product x Strategy x Operations
+
+Core Summary
+Systems-oriented operator who likes aligning people, metrics, and execution. Brings a mix of technical depth, structured thinking, and delivery bias to ambiguous cross-functional work.
+
+Selected Proof
+- Defined success metrics and drove adoption decisions across multiple client teams at KPMG.
+- Built modular enterprise connectors and AI retrieval workflows that reduced query-to-insight time by 65%.
+- Worked on LLM performance bottlenecks with a focus on memory, latency, and operational efficiency.
+- Structured projects around measurable outcomes, not just output volume.
+
+Focus
+- TPM roles
+- Program execution
+- Technical operations
+- Cross-functional systems design
+
+Contact
+krrishkhanna08@gmail.com

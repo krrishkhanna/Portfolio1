@@ -1,0 +1,23 @@
+KRRISH KHANNA
+Product Resume
+
+Positioning
+AI x Product x Strategy x Operations
+
+Core Summary
+Product-minded builder who enjoys turning ambiguous problems into clear user value, measurable systems, and shipped products. Comfortable moving between discovery, framing, prototyping, iteration, and metrics.
+
+Selected Proof
+- Shipped OdinSub with clear user value, pricing tiers, and a live go-to-market motion.
+- Scoped and built VeriLoad end-to-end, prioritizing validation quality before interface polish.
+- Built Vachan's multilingual processing pipeline and improved precision by 28% over baseline.
+- Produced product strategy memos translating market analysis into concrete priorities, risks, and growth levers.
+
+Focus
+- Product roles
+- Product strategy
+- AI-native product building
+- 0-to-1 execution
+
+Contact
+krrishkhanna08@gmail.com

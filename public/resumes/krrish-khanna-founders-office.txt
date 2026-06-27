@@ -1,0 +1,23 @@
+KRRISH KHANNA
+Founder's Office / Technical Operator
+
+Positioning
+AI x Product x Strategy x Operations
+
+Core Summary
+Technical operator with experience across enterprise systems, AI infrastructure, product shipping, and strategic analysis. Strongest in ambiguous environments where the job is to define the problem, structure the work, and move execution forward.
+
+Selected Proof
+- Co-built OdinSub, a live subtitles and translation engine with 100+ language support and real monetization tiers.
+- Built VeriLoad solo and reached 91% validation accuracy across 120+ scenarios.
+- Supported enterprise adoption of a classification pipeline at KPMG across 400k-500k records and 10-20 stakeholders.
+- Contributed to 1.5x-2x LLM inference speed improvements and roughly 40% memory reduction at Samsung Research.
+
+Focus
+- Founder's Office
+- Technical Operator
+- Product Strategy
+- Cross-functional execution
+
+Contact
+krrishkhanna08@gmail.com

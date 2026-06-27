@@ -1,0 +1,9 @@
+.next
+node_modules
+.npm-cache
+.imported-design
+*.log
+.vercel
+.agents
+skills-lock.json
+tsconfig.tsbuildinfo
