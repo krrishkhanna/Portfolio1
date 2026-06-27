@@ -1,6 +1,6 @@
 # Krrish Khanna Portfolio
 
-Personal portfolio for Founder’s Office, Product, Strategy, and Technical Operations roles. Built with Next.js, TypeScript, Tailwind CSS v4, and deployed on Vercel.
+Personal portfolio for Founder’s Office, Product, Strategy, Technical Operations & Applied AI roles. Built with Next.js, TypeScript, Tailwind CSS v4, and deployed on Vercel.
 
 ## Live URL
 
