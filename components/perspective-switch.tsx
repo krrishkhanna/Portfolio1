@@ -5,18 +5,19 @@ import { useState } from "react";
 import { perspectives } from "@/lib/site-data";
 
 export function PerspectiveSwitch() {
-  const [activeId, setActiveId] = useState<(typeof perspectives)[number]["id"]>("founder");
+  const [activeId, setActiveId] = useState<(typeof perspectives)[number]["id"]>("operator");
   const active = perspectives.find((item) => item.id === activeId) ?? perspectives[0];
 
   return (
-    <section className="surface-panel rounded-[2rem] p-6 md:p-8">
+    <section className="surface-panel vision-frame rounded-[2rem] p-6 md:p-8">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-2xl space-y-4">
-          <span className="eyebrow">Perspective Switch</span>
-          <h2 className="section-title">See the same profile through different lenses.</h2>
+          <span className="eyebrow">Mode Switch</span>
+          <h2 className="section-title">Switch between the operator track and the AI systems track.</h2>
           <p className="section-copy">
-            Founder-side, operator-side, or engineer-side. The underlying signal is the
-            same, but the emphasis changes depending on what the role needs most.
+            One side emphasizes founder, product, strategy, operations, and TPM signal.
+            The other emphasizes applied AI systems, retrieval, model performance, and
+            technical execution.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -49,7 +50,7 @@ export function PerspectiveSwitch() {
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {active.bullets.map((bullet) => (
-            <div key={bullet} className="surface-subtle rounded-[1.5rem] p-5">
+            <div key={bullet} className="surface-subtle rounded-[1.5rem] p-5 transition duration-300 hover:-translate-y-1">
               <p className="text-sm leading-7 text-neutral-300">{bullet}</p>
             </div>
           ))}

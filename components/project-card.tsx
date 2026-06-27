@@ -25,6 +25,10 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
+      <div className="mt-6 rounded-2xl border border-white/8 bg-white/[0.02] p-4">
+        <p className="mono-label text-[11px] text-neutral-500">What I&apos;d Improve Next</p>
+        <p className="mt-3 text-sm leading-7 text-neutral-300">{project.improveNext}</p>
+      </div>
       <div className="mt-auto pt-8">
         <Link
           href={project.links.caseStudy}

@@ -22,17 +22,19 @@ export function SiteFooter() {
             ))}
           </div>
           <div className="flex flex-wrap gap-4">
-            {site.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target={social.href.startsWith("http") ? "_blank" : undefined}
-                rel={social.href.startsWith("http") ? "noreferrer" : undefined}
-                className="transition hover:text-white"
-              >
-                {social.label}
-              </a>
-            ))}
+            {site.socials
+              .filter((social) => social.href)
+              .map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target={social.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href?.startsWith("http") ? "noreferrer" : undefined}
+                  className="transition hover:text-white"
+                >
+                  {social.label}
+                </a>
+              ))}
           </div>
         </div>
       </div>

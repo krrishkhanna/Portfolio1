@@ -4,10 +4,14 @@ import { site } from "@/lib/site-data";
 
 const routes = [
   "",
-  "/about",
+  "/ai-lab",
   "/experience",
   "/projects",
   "/product-strategy",
+  "/proof-of-work",
+  "/research",
+  "/research/magiceraser",
+  "/thinking",
   "/writing",
   "/resume",
   "/contact",

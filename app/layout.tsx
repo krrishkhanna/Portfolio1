@@ -13,17 +13,34 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "Krrish Khanna",
+    "Technical Operator",
+    "AI × Product × Strategy × Operations",
+    "Founder’s Office",
+    "Product Strategy",
+    "TPM",
+    "Strategy & Operations",
+    "Startup",
+  ],
   openGraph: {
     title: `${site.name} | ${site.title}`,
     description: site.description,
     type: "website",
     url: site.url,
     siteName: `${site.name} Portfolio`,
+    images: [
+      {
+        url: `${site.url}/home-portrait-2026.png`,
+        alt: `${site.name} portfolio preview`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} | ${site.title}`,
     description: site.description,
+    images: [`${site.url}/home-portrait-2026.png`],
   },
   alternates: {
     canonical: site.url,
@@ -41,6 +58,7 @@ const personSchema = {
     "@type": "PostalAddress",
     addressLocality: site.location,
   },
+  sameAs: site.socials.flatMap((social) => (social.href?.startsWith("http") ? [social.href] : [])),
   url: site.url,
 };
 
@@ -59,6 +77,9 @@ export default function RootLayout({
                 const saved = localStorage.getItem("theme");
                 const theme = saved === "light" || saved === "dark" ? saved : "dark";
                 document.documentElement.dataset.theme = theme;
+                const savedMode = localStorage.getItem("portfolio-mode");
+                const mode = savedMode === "ai" ? "ai" : "operator";
+                document.documentElement.dataset.portfolioMode = mode;
               })();
             `,
           }}

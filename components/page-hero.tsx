@@ -11,16 +11,16 @@ export function PageHero({ eyebrow, title, description, actions }: PageHeroProps
   return (
     <section className="page-space">
       <div className="site-shell">
-        <div className="surface-panel rounded-[2rem] p-8 md:p-12">
-          <span className="eyebrow">{eyebrow}</span>
-          <div className="mt-6 max-w-4xl space-y-6">
-            <h1 className="text-4xl font-semibold tracking-[-0.05em] text-white md:text-6xl">
+        <div className="surface-panel glass-panel rounded-[2rem] p-8 md:p-12">
+          <span className="eyebrow motion-rise">{eyebrow}</span>
+          <div className="mt-6 max-w-[56rem] space-y-6">
+            <h1 className="page-title motion-rise motion-delay-1 text-white">
               {title}
             </h1>
-            <p className="max-w-3xl text-base leading-8 text-neutral-300 md:text-lg">
+            <p className="motion-rise motion-delay-2 max-w-3xl text-base leading-8 text-neutral-300 md:text-lg">
               {description}
             </p>
-            {actions ? <div className="flex flex-wrap gap-4">{actions}</div> : null}
+            {actions ? <div className="motion-rise motion-delay-3 flex flex-wrap gap-4">{actions}</div> : null}
           </div>
         </div>
       </div>
