@@ -607,6 +607,7 @@ export const projects: Project[] = [
     aiBestFor: "Decision Systems + Applied AI",
     links: {
       liveDemo: "https://krrishkhanna.github.io/veriload/",
+      github: "https://github.com/krrishkhanna/veriload",
       caseStudy: "/projects/veriload",
     },
   },
@@ -640,6 +641,7 @@ export const projects: Project[] = [
     aiBestFor: "NLP + Trust Systems",
     links: {
       liveDemo: "https://vachan-1.netlify.app/landing",
+      github: "https://github.com/krrishkhanna/Vachan-",
       caseStudy: "/projects/vachan",
     },
   },
@@ -705,6 +707,7 @@ export const projects: Project[] = [
     aiBestFor: "Computer Vision + Document AI",
     links: {
       liveDemo: "https://krrishkhanna.github.io/sebscan/",
+      github: "https://github.com/krrishkhanna/sebscan",
       caseStudy: "/projects/sebscan",
     },
   },
