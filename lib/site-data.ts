@@ -3,6 +3,11 @@ export type NavItem = {
   label: string;
 };
 
+export type ModeNavigation = {
+  primary: NavItem[];
+  secondary: NavItem[];
+};
+
 export type SocialLink = {
   label: string;
   href?: string;
@@ -65,6 +70,12 @@ export type Project = {
   roadmap?: { phase: string; detail: string }[];
   lessonsLearned?: string[];
   proofItems?: { label: string; href?: string; note?: string }[];
+  operatorSummary?: string;
+  aiSummary?: string;
+  operatorProof?: string;
+  aiProof?: string;
+  operatorBestFor?: string;
+  aiBestFor?: string;
   links: {
     liveDemo?: string;
     github?: string;
@@ -214,6 +225,39 @@ export const navigation: NavItem[] = [
   { href: "/proof-of-work", label: "Proof" },
   { href: "/resume", label: "Resume" },
 ];
+
+export const modeNavigation: Record<"operator" | "ai", ModeNavigation> = {
+  operator: {
+    primary: [
+      { href: "/", label: "Home" },
+      { href: "/experience", label: "Experience" },
+      { href: "/projects", label: "Products" },
+      { href: "/product-strategy", label: "Product Strategy" },
+      { href: "/thinking", label: "Thinking" },
+      { href: "/proof-of-work", label: "Proof" },
+      { href: "/resume", label: "Resume" },
+    ],
+    secondary: [
+      { href: "/ai-lab", label: "AI Lab" },
+      { href: "/research", label: "Research" },
+    ],
+  },
+  ai: {
+    primary: [
+      { href: "/", label: "Home" },
+      { href: "/ai-lab", label: "AI Lab" },
+      { href: "/projects", label: "Applied AI Systems" },
+      { href: "/research", label: "Research" },
+      { href: "/experience", label: "Experience" },
+      { href: "/proof-of-work", label: "Proof" },
+      { href: "/resume", label: "Resume" },
+    ],
+    secondary: [
+      { href: "/product-strategy", label: "Product Strategy" },
+      { href: "/thinking", label: "Thinking" },
+    ],
+  },
+};
 
 export const impactStats: ImpactStat[] = [
   { value: "500k+", label: "records processed" },
@@ -487,6 +531,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would make the forecasting layer more measurable, sharpen recommendation quality through better feedback loops, and expand the system toward a more personalized reflection layer once the data foundation is stronger.",
+    operatorSummary:
+      "Turns messy self-reported attention and energy signals into structured insights, helping users understand focus quality, recovery needs, and behavioral patterns.",
+    aiSummary:
+      "Combines behavioral signal processing, explainable scoring, prediction services, and recommendation logic into a dashboard-first applied AI system.",
+    operatorProof: "Scoring, recommendations, dashboard UX, and cognitive analytics engine. Metrics: TODO.",
+    aiProof: "Signals -> scoring -> pattern detection -> forecasting -> recommendations -> dashboard. Metrics: TODO.",
+    operatorBestFor: "Applied AI + Product",
+    aiBestFor: "Applied AI + Behavioral Systems",
     links: {
       github: "https://github.com/krrishkhanna/lucid-ai",
       caseStudy: "/projects/lucid-ai",
@@ -512,6 +564,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would strengthen onboarding, add clearer activation metrics, and test which user segment has the strongest willingness to pay: students, creators, language learners, or enterprise teams.",
+    operatorSummary:
+      "Live translation product with pricing, onboarding, platform roadmap, GTM packaging, and clear user segmentation.",
+    aiSummary:
+      "Speech and translation workflow spanning live overlays, platform delivery, and real-time multilingual user experience.",
+    operatorProof: "Live product, Free/Pro/Enterprise pricing, onboarding, GTM, and platform roadmap.",
+    aiProof: "Real-time translation workflow, voice interface surface, and speech-driven product system.",
+    operatorBestFor: "Product + GTM",
+    aiBestFor: "Speech AI + Platform Systems",
     links: {
       liveDemo: "https://odinsub.com/",
       caseStudy: "/projects/odinsub",
@@ -537,6 +597,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would add a clearer exception-management workflow, improve audit trails, and test whether operations teams need a reconciliation dashboard, alerting layer, or API-first workflow most urgently.",
+    operatorSummary:
+      "Ambiguous enterprise workflow turned into a structured reconciliation product with validation logic, dashboard UX, and stakeholder-facing delivery.",
+    aiSummary:
+      "Validation and decision-support workflow combining heuristics, structured analytics, and operator-facing system design.",
+    operatorProof: "91% reconciliation accuracy across 120+ test scenarios.",
+    aiProof: "Validation system, decision support, heuristics, and structured analytics.",
+    operatorBestFor: "TPM + Operations",
+    aiBestFor: "Decision Systems + Applied AI",
     links: {
       liveDemo: "https://krrishkhanna.github.io/veriload/",
       caseStudy: "/projects/veriload",
@@ -562,6 +630,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would improve source trust scoring, add human-in-the-loop review for sensitive claims, and focus the product around one high-frequency user segment instead of trying to serve all misinformation use cases at once.",
+    operatorSummary:
+      "Trust-oriented product built around multilingual claims, quality visibility, and clearer operational insight into misinformation workflows.",
+    aiSummary:
+      "Multilingual NLP platform processing 15K+ claims with 28% precision improvement and better evaluation visibility.",
+    operatorProof: "Product execution across trust workflows, dashboards, and measurable quality improvement.",
+    aiProof: "15K+ claims processed and 28% precision improvement over baseline.",
+    operatorBestFor: "Product + Trust Systems",
+    aiBestFor: "NLP + Trust Systems",
     links: {
       liveDemo: "https://vachan-1.netlify.app/landing",
       caseStudy: "/projects/vachan",
@@ -587,6 +663,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would turn the memos into a searchable library with tags for growth, retention, monetization, marketplace dynamics, and AI-native product strategy.",
+    operatorSummary:
+      "Portfolio of investment-style product memos showing prioritization, tradeoffs, growth logic, and strategic thinking before building.",
+    aiSummary:
+      "Product strategy lens for AI-native behavior, monetization, retention, and market tradeoffs.",
+    operatorProof: "10+ investment-style product memos across India, Australia, and US products.",
+    aiProof: "AI-native product strategy analysis with growth, retention, and workflow reasoning.",
+    operatorBestFor: "Founder's Office + Product",
+    aiBestFor: "AI Product Strategy",
     links: {
       caseStudy: "/product-strategy",
     },
@@ -611,6 +695,14 @@ export const projects: Project[] = [
     ],
     improveNext:
       "I would improve exception handling for low-confidence parses, make reviewer feedback loops tighter, and identify which document types create the biggest operational upside first.",
+    operatorSummary:
+      "Document-heavy health-tech workflow turned into a cleaner review system with OCR, risk analytics, and decision support.",
+    aiSummary:
+      "OCR and parsing workflow with 87% parse accuracy across document-heavy operational flows.",
+    operatorProof: "Structured health-tech review workflow with OCR and downstream risk visibility.",
+    aiProof: "87% parse accuracy and document-AI workflow logic.",
+    operatorBestFor: "Operations + Health-tech",
+    aiBestFor: "Computer Vision + Document AI",
     links: {
       liveDemo: "https://krrishkhanna.github.io/sebscan/",
       caseStudy: "/projects/sebscan",

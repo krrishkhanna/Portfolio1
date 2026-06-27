@@ -26,16 +26,17 @@ export default function HomePage() {
     ? {
         title: "Building Intelligent Systems. Applying Machine Learning. Shipping Production AI.",
         subtitle:
-          "I build applied AI systems across machine learning, deep learning, NLP, computer vision, RAG, GenAI, data science, and enterprise deployment.",
+          "I build production-ready intelligent systems across machine learning, deep learning, NLP, computer vision, RAG, GenAI, data science, and enterprise deployment.",
         ctas: [
           { href: "/ai-lab", label: "View AI Lab", primary: true },
-          { href: "/projects", label: "View AI Projects" },
+          { href: "/projects", label: "View Applied AI Systems" },
           { href: "/resume", label: "Download Applied AI Resume" },
         ],
-        focus: [
-          ["GenAI Applications", "RAG, semantic search, vector databases, and enterprise knowledge systems."],
-          ["ML & Deep Learning", "NLP, OCR, model evaluation, benchmarking, and applied AI iteration."],
-          ["AI Systems & Deployment", "APIs, monitoring, inference tradeoffs, and production workflow reliability."],
+        focusTitle: "AI Lab Mode",
+        focusAreas: [
+          ["Focus", "ML, GenAI, systems, research"],
+          ["Proof", "Vachan, Lucid AI, Samsung, Git Software"],
+          ["Next click", "Open AI Lab"],
         ],
       }
     : {
@@ -47,10 +48,11 @@ export default function HomePage() {
           { href: "/proof-of-work", label: "View Proof of Work" },
           { href: "/resume", label: "Download Operator Resume" },
         ],
-        focus: [
-          ["Product Strategy", "Investment-style product memos on growth loops, retention, monetization, and KPI logic."],
-          ["Execution Systems", "KPMG, Git Software, and VeriLoad as structured systems built from ambiguity."],
-          ["Founder’s Office Signal", "Ownership, prioritization, stakeholder communication, and business execution."],
+        focusTitle: "Operator Mode",
+        focusAreas: [
+          ["Focus", "Product, strategy, execution"],
+          ["Proof", "Product Strategy, OdinSub, VeriLoad, KPMG"],
+          ["Next click", "View Product Work"],
         ],
       };
 
@@ -58,16 +60,60 @@ export default function HomePage() {
     ? ["vachan", "lucid-ai", "sebscan", "veriload", "odinsub"]
         .map((slug) => projects.find((item) => item.slug === slug))
         .filter((item): item is (typeof projects)[number] => Boolean(item))
-    : ["product-strategy-portfolio", "odinsub", "veriload", "lucid-ai"]
+    : ["product-strategy-portfolio", "odinsub", "veriload", "lucid-ai", "vachan", "sebscan"]
         .map((slug) => projects.find((item) => item.slug === slug))
         .filter((item): item is (typeof projects)[number] => Boolean(item));
 
+  const proofStrip = isAiMode
+    ? [
+        { title: "Vachan", detail: "15K+ claims and 28% precision improvement", href: "/projects/vachan" },
+        { title: "Lucid AI", detail: "Scoring, prediction, recommendations, and dashboard", href: "/projects/lucid-ai" },
+        { title: "SebScan", detail: "87% parse accuracy and 75+ labels", href: "/projects/sebscan" },
+        { title: "Samsung", detail: "1.5-2x inference speedup and 40% memory reduction", href: "/research" },
+        { title: "Git Software", detail: "Enterprise RAG and 65% faster query-to-insight", href: "/experience" },
+        { title: "MagicEraser", detail: "Research reproduction for diffusion-based object erasure", href: "/research/magiceraser" },
+      ]
+    : [
+        { title: "Product Strategy", detail: "10+ investment-style product memos", href: "/product-strategy" },
+        { title: "OdinSub", detail: "Live product with pricing, onboarding, and roadmap", href: "/projects/odinsub" },
+        { title: "VeriLoad", detail: "91% reconciliation accuracy across 120+ scenarios", href: "/projects/veriload" },
+        { title: "KPMG", detail: "500k+ records processed and stakeholder-facing delivery", href: "/experience" },
+        { title: "Git Software", detail: "65% reduction in query-to-insight time", href: "/experience" },
+        { title: "Samsung", detail: "1.5-2x inference speedup and 40% memory reduction", href: "/research" },
+      ];
+
+  const whyStay = isAiMode
+    ? [
+        "I do not only use AI. I connect AI to systems, deployment, and measurable workflow outcomes.",
+        "I do not only show demos. I show architecture, proof, tradeoffs, and next iterations.",
+        "I can move between research engineering, applied AI systems, and product-facing execution.",
+        "I treat evaluation, reliability, and deployment as part of the product, not as afterthoughts.",
+      ]
+    : [
+        "I do not only build projects. I document decisions, tradeoffs, and operating logic.",
+        "I do not only use AI. I connect AI to products, systems, and measurable outcomes.",
+        "I do not only show work. I show proof, architecture, and next iterations.",
+        "I can switch between operator thinking and applied AI execution without losing clarity.",
+      ];
+
+  const recommendedPaths = isAiMode
+    ? [
+        ["Applied AI", "AI Lab -> Vachan -> Lucid AI -> Samsung -> Git Software"],
+        ["Research", "Research -> Samsung -> R2C2 -> MagicEraser"],
+        ["AI Product", "Lucid AI -> Vachan -> OdinSub -> Resume"],
+      ]
+    : [
+        ["Founders", "Product Strategy -> VeriLoad -> OdinSub -> Thinking -> Proof"],
+        ["Product", "Product Strategy -> OdinSub -> Lucid AI -> Vachan -> Resume"],
+        ["TPM", "VeriLoad -> KPMG -> Samsung -> Thinking -> Proof"],
+      ];
+
   const featuredProofs = isAiMode
     ? proofCards.filter((item) =>
-        ["Git Software Technologies", "Lucid AI", "Vachan", "SebScan"].includes(item.title),
+        ["Samsung Research / PRISM", "MagicEraser - Research Reproduction", "Git Software Technologies", "Lucid AI"].includes(item.title),
       )
     : proofCards.filter((item) =>
-        ["KPMG India", "VeriLoad", "McKinsey Forward Program", "Waseda University Exchange"].includes(item.title),
+        ["Odin / OdinSub", "VeriLoad", "KPMG India", "Lucid AI"].includes(item.title),
       );
 
   const highlightedResume = resumeVariants.find((item) => item.track === mode) ?? resumeVariants[0];
@@ -83,9 +129,7 @@ export default function HomePage() {
               </span>
               <div className="space-y-5">
                 <p className="mono-label motion-rise motion-delay-1 text-xs text-neutral-500">
-                  {isAiMode
-                    ? "Applied AI × GenAI × Systems × Deployment"
-                    : site.subtitle}
+                  {isAiMode ? "Applied AI x GenAI x Systems x Deployment" : site.subtitle}
                 </p>
                 <h1 className="motion-rise motion-delay-2 page-title max-w-5xl text-white">
                   {site.name}
@@ -134,14 +178,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between gap-4 border-b border-white/8 pb-4">
                   <div>
                     <p className="mono-label text-[11px] text-neutral-500">Mode</p>
-                    <p className="mt-2 text-xl font-semibold tracking-tight text-white">
-                      {isAiMode ? "AI Lab Mode" : "Operator Mode"}
-                    </p>
+                    <p className="mt-2 text-xl font-semibold tracking-tight text-white">{hero.focusTitle}</p>
                   </div>
                   <div className="micro-grid h-14 w-14 rounded-2xl border border-white/10" />
                 </div>
                 <div className="mt-4 grid gap-3">
-                  {hero.focus.map(([title, copy], index) => (
+                  {hero.focusAreas.map(([title, copy], index) => (
                     <div
                       key={title}
                       className={`surface-subtle liquid-hover rounded-[1.25rem] p-4 motion-rise motion-delay-${Math.min(index + 2, 5)}`}
@@ -155,6 +197,49 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {proofStrip.map((item) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="surface-panel card-hover rounded-[1.5rem] p-5 transition"
+            >
+              <p className="mono-label text-[11px] text-neutral-500">Selected proof</p>
+              <h3 className="mt-3 text-xl font-semibold tracking-tight text-white">{item.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-neutral-300">{item.detail}</p>
+            </Link>
+          ))}
+        </section>
+
+        <SectionShell
+          eyebrow="What This Proves"
+          title="Why this portfolio is different."
+          copy="The goal is not to look broad for the sake of it. The goal is to make the thinking, systems, proof, and next click obvious early."
+        >
+          <div className="grid gap-4 lg:grid-cols-2">
+            {whyStay.map((item) => (
+              <article key={item} className="surface-panel rounded-[1.5rem] p-5 text-sm leading-7 text-neutral-300">
+                {item}
+              </article>
+            ))}
+          </div>
+        </SectionShell>
+
+        <SectionShell
+          eyebrow="Start Here"
+          title="Recommended paths based on what you are evaluating."
+          copy="A recruiter, founder, TPM manager, or AI hiring manager should know exactly where to click next."
+        >
+          <div className="grid gap-5 lg:grid-cols-3">
+            {recommendedPaths.map(([title, path]) => (
+              <article key={title} className="surface-panel rounded-[1.75rem] p-6">
+                <p className="mono-label text-[11px] text-neutral-500">{title}</p>
+                <p className="mt-4 text-sm leading-8 text-neutral-300">{path}</p>
+              </article>
+            ))}
+          </div>
+        </SectionShell>
 
         <SectionShell
           eyebrow="Impact Snapshot"
@@ -185,7 +270,17 @@ export default function HomePage() {
           }
         >
           <div className="grid gap-5 lg:grid-cols-3">
-            {hero.focus.map(([title, copy]) => (
+            {(isAiMode
+              ? [
+                  ["Behavioral AI", "Lucid AI turns structured signals into scoring, recommendations, and weekly intelligence."],
+                  ["Production Systems", "Vachan, Git Software, and Samsung show evaluation, retrieval, and deployment thinking."],
+                  ["Research Layer", "Samsung, R2C2, and MagicEraser show optimization, benchmarking, and reproduction work."],
+                ]
+              : [
+                  ["Product Strategy", "Investment-style memos show prioritization, growth logic, monetization, and tradeoff quality."],
+                  ["Execution Systems", "KPMG, Git Software, and VeriLoad show structure under ambiguity and stakeholder-facing delivery."],
+                  ["Founder Signal", "OdinSub, Lucid AI, and product framing show pricing, packaging, recommendations, and ownership."],
+                ]).map(([title, copy]) => (
               <article key={title} className="surface-panel card-hover rounded-[1.75rem] p-6">
                 <p className="mono-label text-[11px] text-neutral-500">{isAiMode ? "AI focus" : "Operator focus"}</p>
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">{title}</h3>
@@ -234,7 +329,7 @@ export default function HomePage() {
           copy={
             isAiMode
               ? "The strongest AI projects here are not model demos. They are workflow systems with measurable quality, latency, or trust implications."
-              : "Every project is framed around the problem, insight, what got built, what changed, and what I would improve next."
+              : "Every featured card answers what it is, why it matters, what proof exists, and what to click next."
           }
         >
           <div className="grid gap-5 lg:grid-cols-2">
@@ -281,7 +376,7 @@ export default function HomePage() {
 
         <SectionShell
           eyebrow="Proof"
-          title={isAiMode ? "Research, systems, and deployment proof." : "Recommendations, case studies, demos, and operating proof."}
+          title={isAiMode ? "Research, systems, and deployment proof." : "Proof of product, execution, and operating judgment."}
           copy="Proof should answer why the claims are credible. This section keeps the strongest evidence close to the top."
         >
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">

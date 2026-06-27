@@ -3,12 +3,12 @@ import { SectionShell } from "@/components/section-shell";
 import { proofCards } from "@/lib/site-data";
 
 const sections = [
-  "Research & Technical Work",
-  "Industry Experience",
-  "Shipped Products",
-  "Leadership & Global Programs",
-  "Awards & Recognition",
-  "Selected Credentials",
+  { key: "Shipped Products", title: "Live Products", copy: "Live products, case studies, dashboards, and shipped system surfaces." },
+  { key: "Research & Technical Work", title: "Research Proof", copy: "Optimization work, reproductions, experiments, and technical research artifacts." },
+  { key: "Industry Experience", title: "Internship Proof", copy: "Experience proof tied to enterprise systems, operations, and stakeholder-facing delivery." },
+  { key: "Leadership & Global Programs", title: "Programs & Recognition", copy: "Leadership programs and global experiences that support the broader narrative." },
+  { key: "Awards & Recognition", title: "Awards", copy: "Selected recognition that adds signal without turning the page into a certificate wall." },
+  { key: "Selected Credentials", title: "Certifications", copy: "Focused credentials that support technical depth and delivery discipline." },
 ] as const;
 
 export default function ProofOfWorkPage() {
@@ -23,7 +23,7 @@ export default function ProofOfWorkPage() {
       />
       <div className="site-shell space-y-10 pb-20">
         {sections.map((section) => {
-          const items = proofCards.filter((item) => item.category === section);
+          const items = proofCards.filter((item) => item.category === section.key);
 
           if (!items.length) {
             return null;
@@ -31,10 +31,10 @@ export default function ProofOfWorkPage() {
 
           return (
             <SectionShell
-              key={section}
-              eyebrow={section}
-              title={section}
-              copy="Each card includes what the proof is, why it matters, and what part of the broader story it strengthens."
+              key={section.key}
+              eyebrow={section.title}
+              title={section.title}
+              copy={section.copy}
             >
               <div className="grid gap-5 lg:grid-cols-2">
                 {items.map((item) => (
@@ -48,15 +48,21 @@ export default function ProofOfWorkPage() {
                         <p className="mt-3 text-sm leading-7 text-neutral-300">{item.whyItMatters}</p>
                       </div>
                       <div className="surface-subtle rounded-[1.25rem] p-4">
-                        <p className="mono-label text-[11px] text-neutral-500">Related theme</p>
+                        <p className="mono-label text-[11px] text-neutral-500">Related project / experience</p>
                         <p className="mt-3 text-sm leading-7 text-neutral-300">{item.relatedTheme}</p>
                       </div>
                       {item.asset ? (
                         <div className="surface-subtle rounded-[1.25rem] p-4">
-                          <p className="mono-label text-[11px] text-neutral-500">Proof source</p>
+                          <p className="mono-label text-[11px] text-neutral-500">Link / file</p>
                           <p className="mt-3 text-sm leading-7 text-neutral-300">{item.asset}</p>
                         </div>
                       ) : null}
+                      <div className="surface-subtle rounded-[1.25rem] p-4">
+                        <p className="mono-label text-[11px] text-neutral-500">Status</p>
+                        <p className="mt-3 text-sm leading-7 text-neutral-300">
+                          {item.proofStatus === "missing" ? "Needs upload" : "Verified"}
+                        </p>
+                      </div>
                       {item.proofStatus === "missing" && item.missingLabel ? (
                         <div className="surface-subtle rounded-[1.25rem] border border-amber-400/20 p-4">
                           <p className="mono-label text-[11px] text-amber-300">Document needed</p>

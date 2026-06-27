@@ -1,8 +1,15 @@
 import Link from "next/link";
 
 import type { Project } from "@/lib/site-data";
+import { usePortfolioMode } from "@/lib/use-portfolio-mode";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const mode = usePortfolioMode();
+  const isAiMode = mode === "ai";
+  const summary = isAiMode ? project.aiSummary ?? project.built : project.operatorSummary ?? project.problem;
+  const proof = isAiMode ? project.aiProof : project.operatorProof;
+  const bestFor = isAiMode ? project.aiBestFor : project.operatorBestFor;
+
   return (
     <article className="surface-panel shine-border card-hover flex h-full flex-col rounded-[1.75rem] p-6">
       <div className="space-y-4">
@@ -13,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
         </div>
         <p className="text-sm leading-7 text-neutral-400">{project.tagline}</p>
-        <p className="text-sm leading-7 text-neutral-200">{project.problem}</p>
+        <p className="text-sm leading-7 text-neutral-200">{summary}</p>
       </div>
       <div className="mt-6 flex flex-wrap gap-2">
         {project.techStack.slice(0, 4).map((item) => (
@@ -26,8 +33,18 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
       <div className="mt-6 rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-        <p className="mono-label text-[11px] text-neutral-500">What I&apos;d Improve Next</p>
-        <p className="mt-3 text-sm leading-7 text-neutral-300">{project.improveNext}</p>
+        <p className="mono-label text-[11px] text-neutral-500">Proof</p>
+        <p className="mt-3 text-sm leading-7 text-neutral-300">{proof ?? project.improveNext}</p>
+      </div>
+      {bestFor ? (
+        <div className="mt-4 rounded-2xl border border-white/8 bg-white/[0.02] p-4">
+          <p className="mono-label text-[11px] text-neutral-500">Best for</p>
+          <p className="mt-3 text-sm leading-7 text-neutral-300">{bestFor}</p>
+        </div>
+      ) : null}
+      <div className="mt-4 rounded-2xl border border-white/8 bg-white/[0.02] p-4">
+        <p className="mono-label text-[11px] text-neutral-500">Next click</p>
+        <p className="mt-3 text-sm leading-7 text-neutral-300">Open the case study for architecture, tradeoffs, proof, and next iterations.</p>
       </div>
       <div className="mt-auto pt-8">
         <Link
