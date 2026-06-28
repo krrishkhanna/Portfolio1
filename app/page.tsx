@@ -28,7 +28,7 @@ export default function HomePage() {
         subtitle:
           "I build production-ready intelligent systems across machine learning, deep learning, NLP, computer vision, RAG, GenAI, data science, and enterprise deployment.",
         currentLine:
-          "Building applied AI systems across enterprise RAG, LLM optimization, NLP and document intelligence, and AI product workflows shaped by Git Software, Samsung Research, KPMG, Waseda, and OdinSub.",
+          "Building applied AI systems across enterprise RAG, LLM optimization, NLP and document intelligence, and AI product workflows shaped by Git Software Technologies, Samsung Research, KPMG, Waseda, and OdinSub.",
         supportingLabel: "Credibility Layer",
         ctas: [
           { href: "/ai-lab", label: "View AI Lab", primary: true },
@@ -38,7 +38,7 @@ export default function HomePage() {
         focusTitle: "AI Lab Mode",
         focusAreas: [
           ["Focus", "Applied AI, GenAI, systems, research"],
-          ["Proof", "Git Software, Samsung, KPMG, Waseda, OdinSub"],
+          ["Proof", "Git Software Technologies, Samsung, KPMG, Waseda, OdinSub"],
           ["Next click", "Open AI Lab"],
         ],
       }
@@ -47,7 +47,7 @@ export default function HomePage() {
         subtitle:
           "I solve ambiguous business problems by combining product thinking, AI, systems design, analytics, and execution.",
         currentLine:
-          "Currently co-founding OdinSub after completing a Waseda University exchange, while building enterprise AI systems, product strategy case studies, and execution-focused workflows across KPMG, Samsung, and Git Software.",
+          "Currently co-founding OdinSub after completing a Waseda University exchange, while building enterprise AI systems, product strategy case studies, and execution-focused workflows across KPMG, Samsung, and Git Software Technologies.",
         supportingLabel: "Currently Building",
         ctas: [
           { href: "/projects", label: "View Product Work", primary: true },
@@ -57,7 +57,7 @@ export default function HomePage() {
         focusTitle: "Operator Mode",
         focusAreas: [
           ["Focus", "Product, strategy, execution"],
-          ["Proof", "OdinSub, KPMG, Samsung, Waseda, Git Software"],
+          ["Proof", "OdinSub, KPMG, Samsung, Waseda, Git Software Technologies"],
           ["Next click", "View Product Work"],
         ],
       };
@@ -73,8 +73,8 @@ export default function HomePage() {
   const proofStrip = isAiMode
     ? [
         {
-          title: "Git Software - Enterprise RAG",
-          detail: "RAG pipelines, embeddings, vector search, prompt orchestration, and enterprise AI deployment.",
+          title: "Git Software Technologies - Enterprise RAG",
+          detail: "Enterprise RAG at a London-based tech startup, spanning ingestion, embeddings, vector search, prompt orchestration, and deployment.",
           href: "/experience",
         },
         {
@@ -115,8 +115,8 @@ export default function HomePage() {
           href: "/experience",
         },
         {
-          title: "Git Software",
-          detail: "Enterprise RAG systems reducing query-to-insight time and improving knowledge workflows.",
+          title: "Git Software Technologies",
+          detail: "Enterprise RAG systems at a London-based tech startup, reducing query-to-insight time and improving knowledge workflows.",
           href: "/experience",
         },
         {
@@ -152,7 +152,8 @@ export default function HomePage() {
 
   const recommendedPaths = isAiMode
     ? [
-        ["Applied AI", "AI Lab -> Vachan -> Lucid AI -> Samsung -> Git Software"],
+        ["Applied AI", "AI Lab -> Vachan -> Lucid AI -> Samsung -> Git Software Technologies"],
+        
         ["Research", "Research -> Samsung -> R2C2 -> MagicEraser"],
         ["AI Product", "Lucid AI -> Vachan -> OdinSub -> Resume"],
       ]
@@ -165,7 +166,7 @@ export default function HomePage() {
   const featuredProofs = (
     isAiMode
       ? [
-          "Git Software - Enterprise RAG",
+          "Git Software Technologies - Enterprise RAG",
           "Samsung Research",
           "KPMG",
           "Waseda University",
@@ -175,7 +176,7 @@ export default function HomePage() {
       : [
           "OdinSub - Co-founder",
           "KPMG",
-          "Git Software - Enterprise RAG",
+          "Git Software Technologies - Enterprise RAG",
           "Samsung Research",
           "Waseda University",
           "Product Strategy Portfolio",
@@ -347,12 +348,12 @@ export default function HomePage() {
             {(isAiMode
               ? [
                   ["Behavioral AI", "Lucid AI turns structured signals into scoring, recommendations, and weekly intelligence."],
-                  ["Production Systems", "Vachan, Git Software, and Samsung show evaluation, retrieval, and deployment thinking."],
+                  ["Production Systems", "Vachan, Git Software Technologies, and Samsung show evaluation, retrieval, and deployment thinking."],
                   ["Research Layer", "Samsung, R2C2, and MagicEraser show optimization, benchmarking, and reproduction work."],
                 ]
               : [
                   ["Product Strategy", "Investment-style memos show prioritization, growth logic, monetization, and tradeoff quality."],
-                  ["Execution Systems", "KPMG, Git Software, and VeriLoad show structure under ambiguity and stakeholder-facing delivery."],
+                  ["Execution Systems", "KPMG, Git Software Technologies, and VeriLoad show structure under ambiguity and stakeholder-facing delivery."],
                   ["Founder Signal", "OdinSub, Lucid AI, and product framing show pricing, packaging, recommendations, and ownership."],
                 ]).map(([title, copy]) => (
               <article key={title} className="surface-panel card-hover rounded-[1.75rem] p-6">

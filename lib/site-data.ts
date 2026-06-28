@@ -319,7 +319,7 @@ export const experiences: Experience[] = [
     role: "AI Engineering & Operations Intern",
     period: "Enterprise knowledge retrieval",
     summary:
-      "Built AI-powered knowledge retrieval workflows that reduced query-to-insight time and helped centralize fragmented enterprise knowledge.",
+      "Built AI-powered knowledge retrieval workflows at a London-based tech startup, reducing query-to-insight time and helping centralize fragmented enterprise knowledge.",
     ambiguity:
       "The challenge was fragmented internal knowledge, distributed stakeholders, and disconnected data sources with no single clean spec.",
     structured:
@@ -977,10 +977,10 @@ export const proofCards: ProofCard[] = [
     proofStatus: "available",
   },
   {
-    title: "Git Software - Enterprise RAG",
+    title: "Git Software Technologies - Enterprise RAG",
     category: "Industry Experience",
     explanation:
-      "Enterprise RAG proof tied to document ingestion, embeddings, vector search, prompt orchestration, and faster query-to-insight workflows.",
+      "Enterprise RAG proof tied to work at a London-based tech startup across document ingestion, embeddings, vector search, prompt orchestration, and faster query-to-insight workflows.",
     whyItMatters:
       "It reinforces the ability to take fragmented enterprise knowledge and turn it into a production-minded AI workflow teams can actually use.",
     relatedTheme: "Enterprise RAG, vector search, knowledge workflows, prompt orchestration, applied AI deployment",
