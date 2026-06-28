@@ -15,7 +15,7 @@ export default function AboutPage() {
         <section className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="surface-panel vision-frame glass-panel rounded-[2rem] p-5">
             <Image
-              src="/about-visual.jpg"
+              src="/krrish-khanna-profile.PNG"
               alt="Portrait of Krrish Khanna"
               width={1600}
               height={1600}
