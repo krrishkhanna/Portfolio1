@@ -575,7 +575,7 @@ export const projects: Project[] = [
     improveNext:
       "I would strengthen onboarding, add clearer activation metrics, and test which user segment has the strongest willingness to pay: students, creators, language learners, or enterprise teams.",
     operatorSummary:
-      "Live translation product with pricing, onboarding, platform roadmap, GTM packaging, and clear user segmentation.",
+      "Co-founded OdinSub to explore real-time multilingual communication as a startup opportunity, spanning product strategy, platform design, pricing, onboarding, and early execution.",
     aiSummary:
       "Speech and translation workflow spanning live overlays, platform delivery, and real-time multilingual user experience.",
     operatorProof: "Live product, Free/Pro/Enterprise pricing, onboarding, GTM, and platform roadmap.",

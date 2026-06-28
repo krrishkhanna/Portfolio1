@@ -43,6 +43,8 @@ export default function HomePage() {
         title: "Building Products. Designing Systems. Driving Execution.",
         subtitle:
           "I solve ambiguous business problems by combining product thinking, AI, systems design, analytics, and execution.",
+        currentLine:
+          "Currently co-founding OdinSub, a real-time multilingual communication platform, while building enterprise AI systems and product strategy case studies.",
         ctas: [
           { href: "/projects", label: "View Product Work", primary: true },
           { href: "/proof-of-work", label: "View Proof of Work" },
@@ -51,7 +53,7 @@ export default function HomePage() {
         focusTitle: "Operator Mode",
         focusAreas: [
           ["Focus", "Product, strategy, execution"],
-          ["Proof", "Product Strategy, OdinSub, VeriLoad, KPMG"],
+          ["Proof", "Product Strategy, OdinSub co-founder, VeriLoad, KPMG"],
           ["Next click", "View Product Work"],
         ],
       };
@@ -141,6 +143,12 @@ export default function HomePage() {
                 <p className="motion-rise motion-delay-4 text-sm font-medium text-neutral-200">
                   {site.positioningLine}
                 </p>
+                {!isAiMode && hero.currentLine ? (
+                  <div className="motion-rise motion-delay-5 rounded-2xl border border-sky-400/20 bg-sky-400/8 px-4 py-4 text-sm leading-7 text-sky-100">
+                    <span className="mono-label block text-[11px] text-sky-200/80">Currently Building</span>
+                    <p className="mt-2">{hero.currentLine}</p>
+                  </div>
+                ) : null}
               </div>
               <div className="motion-rise motion-delay-5 flex flex-wrap gap-3">
                 {hero.ctas.map((cta) => (
