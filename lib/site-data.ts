@@ -562,6 +562,16 @@ export const projects: Project[] = [
       "Structured monetization from day one through Free, Pro, and Enterprise tiers.",
       "Created a stronger proof point for 0-to-1 product thinking plus execution.",
     ],
+    proofItems: [
+      { label: "Live website", href: "https://odinsub.com/" },
+      { label: "Validation form", href: "https://docs.google.com/forms/d/e/1FAIpQLSfWVvLaIQM0MT-VTnB2gXCI7Ps17bg8cDBr6_Zd4MeIJZjXuQ/viewform" },
+      { label: "Product screenshot", href: "/proofs/odinsub-language-coverage.png" },
+      { label: "Pricing screenshot", href: "/proofs/odinsub-pricing.png" },
+      { label: "Roadmap screenshot", note: "TODO" },
+      { label: "Co-founder role proof", note: "TODO" },
+      { label: "GitHub / repo", note: "TODO" },
+      { label: "Demo video", note: "TODO" },
+    ],
     improveNext:
       "I would strengthen onboarding, add clearer activation metrics, and test which user segment has the strongest willingness to pay: students, creators, language learners, or enterprise teams.",
     operatorSummary:

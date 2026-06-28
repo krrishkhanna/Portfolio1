@@ -9,15 +9,24 @@ export function ProjectCard({ project }: { project: Project }) {
   const summary = isAiMode ? project.aiSummary ?? project.built : project.operatorSummary ?? project.problem;
   const proof = isAiMode ? project.aiProof : project.operatorProof;
   const bestFor = isAiMode ? project.aiBestFor : project.operatorBestFor;
+  const showCofounderBadge = !isAiMode && project.slug === "odinsub";
+  const displayTitle = showCofounderBadge ? "OdinSub - Co-founder" : project.name;
 
   return (
     <article className="surface-panel shine-border card-hover flex h-full flex-col rounded-[1.75rem] p-6">
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-4">
-          <h3 className="text-2xl font-semibold tracking-tight text-white">{project.name}</h3>
-          <span className="mono-label rounded-full border border-white/10 px-3 py-1 text-[11px] text-neutral-400">
-            Case Study
-          </span>
+          <h3 className="text-2xl font-semibold tracking-tight text-white">{displayTitle}</h3>
+          <div className="flex flex-wrap items-center justify-end gap-2">
+            {showCofounderBadge ? (
+              <span className="mono-label rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[11px] text-sky-200">
+                Co-founder
+              </span>
+            ) : null}
+            <span className="mono-label rounded-full border border-white/10 px-3 py-1 text-[11px] text-neutral-400">
+              Case Study
+            </span>
+          </div>
         </div>
         <p className="text-sm leading-7 text-neutral-400">{project.tagline}</p>
         <p className="text-sm leading-7 text-neutral-200">{summary}</p>

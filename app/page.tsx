@@ -75,7 +75,7 @@ export default function HomePage() {
       ]
     : [
         { title: "Product Strategy", detail: "10+ investment-style product memos", href: "/product-strategy" },
-        { title: "OdinSub", detail: "Live product with pricing, onboarding, and roadmap", href: "/projects/odinsub" },
+        { title: "OdinSub - Co-founder", detail: "Co-founded live product with pricing, onboarding, and roadmap", href: "/projects/odinsub" },
         { title: "VeriLoad", detail: "91% reconciliation accuracy across 120+ scenarios", href: "/projects/veriload" },
         { title: "KPMG", detail: "500k+ records processed and stakeholder-facing delivery", href: "/experience" },
         { title: "Git Software", detail: "65% reduction in query-to-insight time", href: "/experience" },
