@@ -27,25 +27,36 @@ export function ModeToggle() {
   };
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-white/8 bg-white/[0.03] p-1">
-      {MODES.map((item) => {
-        const isActive = item.id === mode;
+    <div className="flex flex-col items-start gap-1.5">
+      <div className="flex items-center gap-2">
+        <span className="mono-label text-[10px] text-neutral-500">Choose your lens</span>
+        <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-2 py-0.5 text-[10px] font-medium text-sky-200">
+          2 modes
+        </span>
+      </div>
+      <div className="flex items-center gap-1 rounded-[1.2rem] border border-white/8 bg-white/[0.03] p-1 shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
+        {MODES.map((item) => {
+          const isActive = item.id === mode;
 
-        return (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => updateMode(item.id)}
-            className={`rounded-full px-3 py-1.5 text-xs transition sm:text-sm ${
-              isActive
-                ? "bg-white font-medium text-neutral-950 shadow-[0_8px_24px_rgba(255,255,255,0.16)]"
-                : "text-neutral-400 hover:bg-white/6 hover:text-white"
-            }`}
-          >
-            {item.label}
-          </button>
-        );
-      })}
+          return (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => updateMode(item.id)}
+              className={`rounded-full px-3.5 py-1.5 text-xs transition sm:text-sm ${
+                isActive
+                  ? "bg-white font-medium text-neutral-950 shadow-[0_8px_24px_rgba(255,255,255,0.16)]"
+                  : "text-neutral-400 hover:bg-white/6 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+      <p className="hidden text-[11px] text-neutral-500 lg:block">
+        Switch between operator and AI perspectives.
+      </p>
     </div>
   );
 }
