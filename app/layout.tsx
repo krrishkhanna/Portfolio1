@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import { ModeTransitionShell } from "@/components/mode-transition-shell";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/lib/site-data";
@@ -88,9 +89,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
+        <ModeTransitionShell>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </ModeTransitionShell>
       </body>
     </html>
   );
