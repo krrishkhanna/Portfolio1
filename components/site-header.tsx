@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-black/72 backdrop-blur-xl">
       <div className="site-shell py-3">
-        <div className="flex flex-col gap-3 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center">
+        <div className="flex flex-col gap-2.5 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center">
           <Link href="/" className="flex items-center gap-3 lg:justify-self-start">
             <div className="flex h-10 w-10 items-center justify-center rounded-[1.15rem] border border-white/10 bg-white/4 text-sm font-semibold text-white">
               KK
@@ -55,7 +55,7 @@ export function SiteHeader() {
             </Link>
           </div>
         </div>
-        <nav className="mt-3 flex gap-1 overflow-x-auto rounded-full border border-white/8 bg-white/[0.03] px-1.5 py-1.5">
+        <nav className="mt-2.5 flex gap-1 overflow-x-auto rounded-full border border-white/8 bg-white/[0.03] px-1.5 py-1.5">
           {nav.primary.map((item) => {
             const isActive = pathname === item.href;
 
@@ -63,7 +63,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`shrink-0 rounded-full px-3.5 py-1.5 text-sm transition ${
+                className={`shrink-0 rounded-full px-3.5 py-1.25 text-sm transition ${
                   isActive
                     ? "bg-white font-medium text-neutral-950 shadow-[0_8px_24px_rgba(255,255,255,0.18)]"
                     : "text-neutral-400 hover:bg-white/6 hover:text-white"
