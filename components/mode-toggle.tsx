@@ -36,7 +36,7 @@ export function ModeToggle() {
             key={item.id}
             type="button"
             onClick={() => updateMode(item.id)}
-            className={`rounded-full px-3 py-2 text-xs transition sm:text-sm ${
+            className={`rounded-full px-3 py-1.5 text-xs transition sm:text-sm ${
               isActive
                 ? "bg-white font-medium text-neutral-950 shadow-[0_8px_24px_rgba(255,255,255,0.16)]"
                 : "text-neutral-400 hover:bg-white/6 hover:text-white"
