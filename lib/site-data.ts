@@ -245,7 +245,6 @@ export const modeNavigation: Record<"operator" | "ai", ModeNavigation> = {
   ai: {
     primary: [
       { href: "/", label: "Home" },
-      { href: "/ai-lab", label: "AI Lab" },
       { href: "/projects", label: "Applied AI Systems" },
       { href: "/research", label: "Research" },
       { href: "/experience", label: "Experience" },

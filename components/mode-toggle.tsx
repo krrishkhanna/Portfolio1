@@ -29,7 +29,7 @@ export function ModeToggle() {
   return (
     <div className="flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.02] px-2 py-1 shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
       <div className="hidden items-center gap-2 pl-1 md:flex">
-        <span className="mono-label text-[10px] text-neutral-500">2 modes</span>
+        <span className="mono-label text-[10px] text-neutral-500">Mode</span>
       </div>
       <div className="flex items-center gap-1 rounded-full border border-white/8 bg-white/[0.03] p-1">
         {MODES.map((item) => {
@@ -42,7 +42,7 @@ export function ModeToggle() {
               onClick={() => updateMode(item.id)}
               className={`rounded-full px-3 py-1.5 text-xs transition sm:text-sm ${
                 isActive
-                  ? "bg-white font-medium text-neutral-950 shadow-[0_8px_24px_rgba(255,255,255,0.16)]"
+                  ? "bg-white/92 font-medium text-neutral-950 shadow-[0_8px_20px_rgba(255,255,255,0.12)]"
                   : "text-neutral-400 hover:bg-white/6 hover:text-white"
               }`}
             >

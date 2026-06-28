@@ -25,10 +25,9 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="button-secondary inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white"
+      className="button-secondary inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-white"
       aria-label="Toggle light and dark mode"
     >
-      <span className="mono-label text-[10px] text-neutral-500">Theme</span>
       <span>{ready && theme === "light" ? "Light" : "Dark"}</span>
     </button>
   );
