@@ -928,13 +928,13 @@ export const writing: WritingPiece[] = [
 
 export const proofCards: ProofCard[] = [
   {
-    title: "Samsung Research / PRISM",
+    title: "Samsung Research",
     category: "Research & Technical Work",
     explanation:
-      "Proof for the Samsung research work around compressed LLM inference, optimization, and experimentation on production-minded AI systems.",
+      "Tensorized LLM optimization work across compressed inference, benchmarking, and latency-memory tradeoffs on production-minded AI systems.",
     whyItMatters:
-      "It supports the applied AI and research layer of the portfolio with a cleaner, updated document instead of the older proof.",
-    relatedTheme: "LLM inference, model optimization, experimentation, AI systems research",
+      "It supports the AI systems story with concrete work on benchmarking, model compression, and engineering recommendations rather than generic research signaling.",
+    relatedTheme: "LLM optimization, benchmarking, inference speedup, memory reduction, AI systems research",
     asset: "Samsung PRISM proof PDF",
     docHref: "/proofs/samsung-prism-proof-2026.pdf",
     proofStatus: "available",
@@ -954,13 +954,13 @@ export const proofCards: ProofCard[] = [
     proofStatus: "available",
   },
   {
-    title: "KPMG India",
+    title: "KPMG",
     category: "Industry Experience",
     explanation:
-      "Internship proof supporting work on a regulatory intelligence workflow that served 20+ stakeholders and large-scale record ingestion.",
+      "Document intelligence and regulatory workflow proof spanning NLP, semantic similarity, ontology mapping, and SQL-backed validation.",
     whyItMatters:
-      "It validates founder-relevant signal around ambiguity handling, stakeholder management, and building operating structure.",
-    relatedTheme: "Regulatory systems, operations, stakeholder alignment",
+      "It validates both enterprise execution signal and applied AI document-intelligence work in a stakeholder-facing environment.",
+    relatedTheme: "Document intelligence, regulatory systems, stakeholder alignment, workflow automation",
     asset: "KPMG internship proof PDF",
     docHref: "/proofs/Krrish_KPMG.pdf",
     proofStatus: "available",
@@ -978,13 +978,13 @@ export const proofCards: ProofCard[] = [
     proofStatus: "available",
   },
   {
-    title: "Git Software Technologies",
+    title: "Git Software - Enterprise RAG",
     category: "Industry Experience",
     explanation:
-      "Experience proof tied to AI-powered knowledge retrieval workflows and faster query-to-insight loops.",
+      "Enterprise RAG proof tied to document ingestion, embeddings, vector search, prompt orchestration, and faster query-to-insight workflows.",
     whyItMatters:
-      "It reinforces the ability to turn fragmented internal systems into something more usable for real teams.",
-    relatedTheme: "Enterprise knowledge workflows, AI retrieval, operational usability",
+      "It reinforces the ability to take fragmented enterprise knowledge and turn it into a production-minded AI workflow teams can actually use.",
+    relatedTheme: "Enterprise RAG, vector search, knowledge workflows, prompt orchestration, applied AI deployment",
     asset: "Imported proof bundle PDF",
     docHref: "/krrish-proof-bundle.pdf",
     proofStatus: "available",
@@ -1028,16 +1028,28 @@ export const proofCards: ProofCard[] = [
     proofStatus: "available",
   },
   {
-    title: "Odin / OdinSub",
+    title: "OdinSub - Co-founder",
     category: "Shipped Products",
     explanation:
-      "Public live demo for a translation overlay product with 100+ languages and a freemium SaaS positioning.",
+      "Co-founder proof for a real-time multilingual communication product with pricing, onboarding, product positioning, and roadmap.",
     whyItMatters:
-      "It shows 0-to-1 product energy, shipping discipline, and a stronger founder-facing proof point than a static concept site.",
-    relatedTheme: "Live translation, SaaS packaging, product execution",
+      "It shows startup ownership, product judgment, shipping discipline, and founder-facing proof beyond a static concept or class project.",
+    relatedTheme: "Live translation, pricing, onboarding, roadmap, startup execution",
     href: "https://odinsub.com/",
     asset: "Shipped products CSV + live demo",
     docHref: "/krrish-proof-bundle.pdf",
+    proofStatus: "available",
+  },
+  {
+    title: "Product Strategy Portfolio",
+    category: "Shipped Products",
+    explanation:
+      "Investment-style product memo library covering growth loops, retention, monetization, product tradeoffs, and KPI logic.",
+    whyItMatters:
+      "It proves that the product thinking on the site is not decorative. There is a real body of strategic writing behind the operator narrative.",
+    relatedTheme: "Product strategy, retention, monetization, prioritization, product judgment",
+    href: "/product-strategy",
+    asset: "Strategy memo library",
     proofStatus: "available",
   },
   {
@@ -1091,13 +1103,13 @@ export const proofCards: ProofCard[] = [
     proofStatus: "available",
   },
   {
-    title: "Waseda University Exchange",
+    title: "Waseda University",
     category: "Leadership & Global Programs",
     explanation:
-      "Proof of academic and cross-cultural exposure in Japan that shaped how I think about systems, quality, and discipline.",
+      "Completed semester exchange in Tokyo that added global CS exposure, cross-cultural learning, and a stronger research-oriented lens.",
     whyItMatters:
-      "It gives the international exposure claim real grounding rather than leaving it as a vague line item.",
-    relatedTheme: "Japan exposure, cross-cultural learning, systems discipline",
+      "It grounds the international exposure claim in a real completed experience and strengthens both the operator and research-adjacent story.",
+    relatedTheme: "Waseda exchange, Japan exposure, cross-cultural learning, research-oriented systems thinking",
     asset: "Imported proof bundle PDF",
     docHref: "/krrish-proof-bundle.pdf",
     proofStatus: "available",

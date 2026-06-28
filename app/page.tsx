@@ -27,6 +27,9 @@ export default function HomePage() {
         title: "Building Intelligent Systems. Applying Machine Learning. Shipping Production AI.",
         subtitle:
           "I build production-ready intelligent systems across machine learning, deep learning, NLP, computer vision, RAG, GenAI, data science, and enterprise deployment.",
+        currentLine:
+          "Building applied AI systems across enterprise RAG, LLM optimization, NLP and document intelligence, and AI product workflows shaped by Git Software, Samsung Research, KPMG, Waseda, and OdinSub.",
+        supportingLabel: "Credibility Layer",
         ctas: [
           { href: "/ai-lab", label: "View AI Lab", primary: true },
           { href: "/projects", label: "View Applied AI Systems" },
@@ -34,8 +37,8 @@ export default function HomePage() {
         ],
         focusTitle: "AI Lab Mode",
         focusAreas: [
-          ["Focus", "ML, GenAI, systems, research"],
-          ["Proof", "Vachan, Lucid AI, Samsung, Git Software"],
+          ["Focus", "Applied AI, GenAI, systems, research"],
+          ["Proof", "Git Software, Samsung, KPMG, Waseda, OdinSub"],
           ["Next click", "Open AI Lab"],
         ],
       }
@@ -44,7 +47,8 @@ export default function HomePage() {
         subtitle:
           "I solve ambiguous business problems by combining product thinking, AI, systems design, analytics, and execution.",
         currentLine:
-          "Currently co-founding OdinSub, a real-time multilingual communication platform, while building enterprise AI systems and product strategy case studies.",
+          "Currently co-founding OdinSub after completing a Waseda University exchange, while building enterprise AI systems, product strategy case studies, and execution-focused workflows across KPMG, Samsung, and Git Software.",
+        supportingLabel: "Currently Building",
         ctas: [
           { href: "/projects", label: "View Product Work", primary: true },
           { href: "/proof-of-work", label: "View Proof of Work" },
@@ -53,7 +57,7 @@ export default function HomePage() {
         focusTitle: "Operator Mode",
         focusAreas: [
           ["Focus", "Product, strategy, execution"],
-          ["Proof", "Product Strategy, OdinSub co-founder, VeriLoad, KPMG"],
+          ["Proof", "OdinSub, KPMG, Samsung, Waseda, Git Software"],
           ["Next click", "View Product Work"],
         ],
       };
@@ -68,20 +72,68 @@ export default function HomePage() {
 
   const proofStrip = isAiMode
     ? [
-        { title: "Vachan", detail: "15K+ claims and 28% precision improvement", href: "/projects/vachan" },
-        { title: "Lucid AI", detail: "Scoring, prediction, recommendations, and dashboard", href: "/projects/lucid-ai" },
-        { title: "SebScan", detail: "87% parse accuracy and 75+ labels", href: "/projects/sebscan" },
-        { title: "Samsung", detail: "1.5-2x inference speedup and 40% memory reduction", href: "/research" },
-        { title: "Git Software", detail: "Enterprise RAG and 65% faster query-to-insight", href: "/experience" },
-        { title: "MagicEraser", detail: "Research reproduction for diffusion-based object erasure", href: "/research/magiceraser" },
+        {
+          title: "Git Software - Enterprise RAG",
+          detail: "RAG pipelines, embeddings, vector search, prompt orchestration, and enterprise AI deployment.",
+          href: "/experience",
+        },
+        {
+          title: "Samsung Research",
+          detail: "Tensorized LLM optimization with benchmarking, inference speedup, and memory reduction.",
+          href: "/research",
+        },
+        {
+          title: "KPMG - Document Intelligence",
+          detail: "NLP, semantic similarity, ontology mapping, and SQL-backed validation for regulatory workflows.",
+          href: "/experience",
+        },
+        {
+          title: "Waseda / R2C2",
+          detail: "Completed exchange with research exposure across information retrieval, NLP, and RAG evaluation.",
+          href: "/research",
+        },
+        {
+          title: "OdinSub - Co-founder",
+          detail: "Real-time translation and subtitle platform exploring speech, multilingual workflows, and AI-assisted communication.",
+          href: "/projects/odinsub",
+        },
+        {
+          title: "Lucid AI",
+          detail: "Signals, scoring, prediction, recommendations, and dashboard-first applied intelligence.",
+          href: "/projects/lucid-ai",
+        },
       ]
     : [
-        { title: "Product Strategy", detail: "10+ investment-style product memos", href: "/product-strategy" },
-        { title: "OdinSub - Co-founder", detail: "Co-founded live product with pricing, onboarding, and roadmap", href: "/projects/odinsub" },
-        { title: "VeriLoad", detail: "91% reconciliation accuracy across 120+ scenarios", href: "/projects/veriload" },
-        { title: "KPMG", detail: "500k+ records processed and stakeholder-facing delivery", href: "/experience" },
-        { title: "Git Software", detail: "65% reduction in query-to-insight time", href: "/experience" },
-        { title: "Samsung", detail: "1.5-2x inference speedup and 40% memory reduction", href: "/research" },
+        {
+          title: "OdinSub - Co-founder",
+          detail: "Co-founded a real-time multilingual communication product with pricing, onboarding, and roadmap.",
+          href: "/projects/odinsub",
+        },
+        {
+          title: "KPMG",
+          detail: "Enterprise automation across large-scale data workflows and stakeholder-facing delivery.",
+          href: "/experience",
+        },
+        {
+          title: "Git Software",
+          detail: "Enterprise RAG systems reducing query-to-insight time and improving knowledge workflows.",
+          href: "/experience",
+        },
+        {
+          title: "Samsung Research",
+          detail: "LLM optimization, benchmarking, latency-memory tradeoffs, and engineering recommendations.",
+          href: "/research",
+        },
+        {
+          title: "Waseda University",
+          detail: "Completed semester exchange in Tokyo, adding global CS exposure and research-oriented learning.",
+          href: "/proof-of-work",
+        },
+        {
+          title: "Product Strategy",
+          detail: "Investment-style memos on growth loops, retention, monetization, and KPI logic.",
+          href: "/product-strategy",
+        },
       ];
 
   const whyStay = isAiMode
@@ -110,13 +162,27 @@ export default function HomePage() {
         ["TPM", "VeriLoad -> KPMG -> Samsung -> Thinking -> Proof"],
       ];
 
-  const featuredProofs = isAiMode
-    ? proofCards.filter((item) =>
-        ["Samsung Research / PRISM", "MagicEraser - Research Reproduction", "Git Software Technologies", "Lucid AI"].includes(item.title),
-      )
-    : proofCards.filter((item) =>
-        ["Odin / OdinSub", "VeriLoad", "KPMG India", "Lucid AI"].includes(item.title),
-      );
+  const featuredProofs = (
+    isAiMode
+      ? [
+          "Git Software - Enterprise RAG",
+          "Samsung Research",
+          "KPMG",
+          "Waseda University",
+          "OdinSub - Co-founder",
+          "Lucid AI",
+        ]
+      : [
+          "OdinSub - Co-founder",
+          "KPMG",
+          "Git Software - Enterprise RAG",
+          "Samsung Research",
+          "Waseda University",
+          "Product Strategy Portfolio",
+        ]
+  )
+    .map((title) => proofCards.find((item) => item.title === title))
+    .filter((item): item is (typeof proofCards)[number] => Boolean(item));
 
   const highlightedResume = resumeVariants.find((item) => item.track === mode) ?? resumeVariants[0];
 
@@ -143,9 +209,9 @@ export default function HomePage() {
                 <p className="motion-rise motion-delay-4 text-sm font-medium text-neutral-200">
                   {site.positioningLine}
                 </p>
-                {!isAiMode && hero.currentLine ? (
+                {hero.currentLine ? (
                   <div className="motion-rise motion-delay-5 rounded-2xl border border-sky-400/20 bg-sky-400/8 px-4 py-4 text-sm leading-7 text-sky-100">
-                    <span className="mono-label block text-[11px] text-sky-200/80">Currently Building</span>
+                    <span className="mono-label block text-[11px] text-sky-200/80">{hero.supportingLabel}</span>
                     <p className="mt-2">{hero.currentLine}</p>
                   </div>
                 ) : null}
