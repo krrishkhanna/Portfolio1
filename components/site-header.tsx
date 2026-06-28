@@ -19,8 +19,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-black/72 backdrop-blur-xl">
       <div className="site-shell py-3">
-        <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
+        <div className="flex flex-col gap-3 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center">
+          <Link href="/" className="flex items-center gap-3 lg:justify-self-start">
             <div className="flex h-10 w-10 items-center justify-center rounded-[1.15rem] border border-white/10 bg-white/4 text-sm font-semibold text-white">
               KK
             </div>
@@ -29,9 +29,11 @@ export function SiteHeader() {
               <div className="mono-label text-[11px] text-neutral-500">{site.title}</div>
             </div>
           </Link>
-          <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-2.5">
+          <div className="flex justify-center lg:justify-self-center">
             <ModeToggle />
-            <div className="flex items-center gap-2">
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 lg:justify-self-end">
+            <div className="flex items-center justify-center gap-2">
               {topSocials.map((social) => (
                 <a
                   key={social.label}

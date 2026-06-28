@@ -27,8 +27,8 @@ export function ModeToggle() {
   };
 
   return (
-    <div className="flex flex-col items-start gap-1.5">
-      <div className="flex items-center gap-2">
+    <div className="flex flex-col items-center gap-1.5 text-center">
+      <div className="flex items-center justify-center gap-2">
         <span className="mono-label text-[10px] text-neutral-500">Choose your lens</span>
         <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-2 py-0.5 text-[10px] font-medium text-sky-200">
           2 modes
